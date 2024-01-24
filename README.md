@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Created and placed rawg_api.rb at library 'app/lib' since it is reusable
 
-Things you may want to cover:
+Passed the api folder to 'config/initializer' to construct an absolute path to a file or directory within a Rails application. This is also to ensure it gets loaded when the Rails application starts.
 
-* Ruby version
+"require Rails.root.join('lib/rawg_api)"
 
-* System dependencies
+The client and request class is located in one file to organize the code
 
-* Configuration
+inside the rawg_api.rb The handle_response method provides a basic way to handle API responses, especially focusing on logging information when the response code is not 200. Depending on your application's needs.
 
-* Database creation
+"def self.handle_response(response)
+      if response.code == 200
+        JSON.parse(response.body)
+      else
+        puts "Failed to make API request. Status code: #{response.code}"
+        puts "Response body: #{response.body}"
+        nil
+      end
+    end
+end"
 
-* Database initialization
+Created a controller that handles the request it defines an index action that invoked when a request is made to the
+routes created which is 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+'Rails.application.routes.draw do
+  get '/games', to: 'games#index'
+end'
