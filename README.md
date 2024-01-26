@@ -34,8 +34,8 @@ end'
 ENDPOINTS:
 
 HTTP METHOD: GET
-### https://api.rawg.io/api/genres
-### https://api.rawg.io/api/games
-### https://api.rawg.io/api/creators
-### https://api.rawg.io/api/creator-roles
+##### https://api.rawg.io/api/genres
+##### https://api.rawg.io/api/games
+##### https://api.rawg.io/api/creators
+##### https://api.rawg.io/api/creator-roles
 
