@@ -1,9 +1,9 @@
 <h1>Games from Rawg API</h1>
 
-<% if @games %>
+<% if @creator_roles %>
   <ul>
-    <% @games["results"].each do |game| %>
-      <li><%= game["name"] %></li>
+    <% @creator_roles["results"].each do |creator_roles| %>
+      <li><%= creator_roles["name"] %></li>
     <% end %>
   </ul>
 <% else %>

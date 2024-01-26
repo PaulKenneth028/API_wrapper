@@ -3,8 +3,8 @@ require 'json'
 
 module Rawg
   module Request
-    BASE_URL = "https://api.rawg.io/api".freeze
-    API_KEY = '834402d5c30148dfa749cbf4eaba01ed'.freeze
+    BASE_URL = "https://api.rawg.io/api"
+    API_KEY = '834402d5c30148dfa749cbf4eaba01ed'
 
     def self.call(http_method:, endpoint:, params: {})
       url = "#{BASE_URL}#{endpoint}?key=#{API_KEY}"
@@ -31,8 +31,24 @@ module Rawg
   end
 
   class Client
+    def self.creator_roles
+      Request.call(http_method: "GET", endpoint: "/creator-roles")
+    end
+
     def self.games
       Request.call(http_method: "GET", endpoint: "/games")
+    end
+
+    def self.creators
+      Request.call(http_method: "GET", endpoint: "/creators")
+    end
+
+    def self.genres
+      Request.call(http_method: "GET", endpoint: "/genres")
+    end
+
+    def self.games_dlc_additions(game_pk)
+      Request.call(http_method: "GET", endpoint: "/games/#{game_pk}/additions")
     end
   end
 end

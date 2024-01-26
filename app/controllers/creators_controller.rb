@@ -1,13 +1,11 @@
-
-class GamesController < ApplicationController
+class CreatorsController < ApplicationController
     def index
-      @games = Rawg::Client.games
+      @creators = Rawg::Client.creators
   
-      if @games
-        render json: @games
+      if @creators
+        render json: @creators
       else
         render json: { error: "Failed to retrieve data from Rawg API" }, status: :unprocessable_entity
       end
     end
   end
-  
