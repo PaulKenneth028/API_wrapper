@@ -1,4 +1,5 @@
 # README
+### My steps on creating this API wrapper.
 
 Created and placed rawg_api.rb at library 'app/lib' since it is reusable
 
@@ -33,9 +34,8 @@ end'
 ENDPOINTS:
 
 HTTP METHOD: GET
-
-https://api.rawg.io/api/genres
-https://api.rawg.io/api/games
-https://api.rawg.io/api/creators
-https://api.rawg.io/api/creator-roles
+### https://api.rawg.io/api/genres
+### https://api.rawg.io/api/games
+### https://api.rawg.io/api/creators
+### https://api.rawg.io/api/creator-roles
 
