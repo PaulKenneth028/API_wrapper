@@ -1,5 +1,5 @@
 # README
-### My steps on creating this API wrapper.
+### Steps made for creating this API wrapper.
 
 Created and placed rawg_api.rb at library 'app/lib' since it is reusable
 
