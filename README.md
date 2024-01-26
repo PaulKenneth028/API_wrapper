@@ -9,7 +9,7 @@ Passed the api folder to 'config/initializer' to construct an absolute path to a
 The client and request class is located in one file to organize the code
 
 inside the rawg_api.rb The handle_response method provides a basic way to handle API responses, especially focusing on logging information when the response code is not 200. Depending on application's needs.
-
+```ruby
 "def self.handle_response(response)
       if response.code == 200
         JSON.parse(response.body)
@@ -20,13 +20,15 @@ inside the rawg_api.rb The handle_response method provides a basic way to handle
       end
     end
 end"
-
+```
 Created a controller that handles the request it defines an index action that invoked when a request is made to the
 routes created which is 
 
+```ruby
 'Rails.application.routes.draw do
   get '/games', to: 'games#index'
 end'
+```
 
 ENDPOINTS:
 
